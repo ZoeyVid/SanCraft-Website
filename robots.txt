@@ -2,5 +2,6 @@ User-agent: *
 Disallow: /imprint
 Disallow: /privacy
 Disallow: /assets
+Disallow: /assets
 
 Sitemap: https://sancraft.de/sitemap.xml
