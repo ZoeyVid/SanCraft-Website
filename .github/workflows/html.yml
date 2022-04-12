@@ -17,7 +17,6 @@ jobs:
         log_level: INFO
         css: true
         skip_git_check: true
-        format: json
       continue-on-error: true
     - uses: actions/upload-artifact@v3
       with:
