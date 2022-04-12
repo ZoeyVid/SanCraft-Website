@@ -17,55 +17,8 @@ jobs:
         log_level: INFO
         css: true
         skip_git_check: true
-      continue-on-error: true
-
-    - uses: actions/checkout@v3
-
-    - name: Plain Test
-      uses: ./
-      with:
-        root: tests/valid/
-
-    - name: Testing Options
-      id: valid
-      uses: ./
-      with:
-        root: tests/valid/
         format: json
-        log_level: INFO
-        extra: -lll
-        css: true
-
-    - name: Test config
-      id: config
-      uses: ./
-      with:
-        config: tests/example_config.yaml
-
-    - name: Check Blacklist
-      id: blacklist
-      uses: ./
-      with:
-        root: tests/
-        blacklist: invalid
-
-    - name: Check Failure
-      id: invalid
-      uses: ./
-      with:
-        root: tests/invalid/
-        log_level: INFO
-        css: true
       continue-on-error: true
-
-    - name: Check Empty
-      id: empty
-      uses: ./
-      with:
-        log_level: INFO
-        css: true
-      continue-on-error: true
-
     - uses: actions/upload-artifact@v3
       with:
         name: log
