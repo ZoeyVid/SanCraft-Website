@@ -16,3 +16,5 @@ jobs:
         root: /github/workspace
         css: true
         log_level: INFO
+        skip_git_check: true
+      continue-on-error: true
