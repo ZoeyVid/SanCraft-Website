@@ -14,6 +14,7 @@ jobs:
       uses: Cyb3r-Jak3/html5validator-action@master
       with:
         root: /github/workspace
+        log_level: INFO
         css: true
         skip_git_check: true
       continue-on-error: true
